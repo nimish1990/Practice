@@ -1,8 +1,10 @@
 package com.data.practice.patterns.singleton;
 
-public class Thread1 implements Runnable {
+public class Thread3 implements Runnable {
+
     @Override
     public void run() {
+
         MyClassSingleton myClassSingleton = MyClassSingleton.getInstance();
         System.out.println(Thread.currentThread().getName() + " myClassSingleton: " + myClassSingleton.hashCode());
 
@@ -11,5 +13,6 @@ public class Thread1 implements Runnable {
 
         DoubleLockSingleton doubleLockSingleton = DoubleLockSingleton.getInstance();
         System.out.println(Thread.currentThread().getName() + " doubleLockSingleton: " + doubleLockSingleton.hashCode());
+
     }
 }
